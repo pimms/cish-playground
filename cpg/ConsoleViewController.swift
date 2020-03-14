@@ -5,5 +5,7 @@ class ConsoleViewController: NSViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        textView.font = Styling.defaultEditorFont
     }
 }

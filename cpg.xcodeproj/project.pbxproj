@@ -16,6 +16,7 @@
 		19EE4ED0241CCE6100008BBA /* ConsoleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EE4ECF241CCE6100008BBA /* ConsoleViewController.swift */; };
 		19EE4ED2241CCEA100008BBA /* TextEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EE4ED1241CCEA100008BBA /* TextEditorViewController.swift */; };
 		19EE4ED4241CCF3100008BBA /* SplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EE4ED3241CCF3100008BBA /* SplitViewController.swift */; };
+		19EE4ED8241CD1D300008BBA /* Styling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EE4ED7241CD1D300008BBA /* Styling.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +44,7 @@
 		19EE4ECF241CCE6100008BBA /* ConsoleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsoleViewController.swift; sourceTree = "<group>"; };
 		19EE4ED1241CCEA100008BBA /* TextEditorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextEditorViewController.swift; sourceTree = "<group>"; };
 		19EE4ED3241CCF3100008BBA /* SplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitViewController.swift; sourceTree = "<group>"; };
+		19EE4ED7241CD1D300008BBA /* Styling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Styling.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 		19AA9E60241AE47D00F4D59C /* cpg */ = {
 			isa = PBXGroup;
 			children = (
+				19EE4ED5241CD1BB00008BBA /* Library */,
 				19AA9E61241AE47D00F4D59C /* AppDelegate.swift */,
 				19EE4ED1241CCEA100008BBA /* TextEditorViewController.swift */,
 				19EE4ECF241CCE6100008BBA /* ConsoleViewController.swift */,
@@ -105,6 +108,14 @@
 				19AA9E76241AE47E00F4D59C /* Info.plist */,
 			);
 			path = cpgTests;
+			sourceTree = "<group>";
+		};
+		19EE4ED5241CD1BB00008BBA /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				19EE4ED7241CD1D300008BBA /* Styling.swift */,
+			);
+			path = Library;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -209,6 +220,7 @@
 			files = (
 				19EE4ED2241CCEA100008BBA /* TextEditorViewController.swift in Sources */,
 				19EE4ECE241CC94500008BBA /* WindowController.swift in Sources */,
+				19EE4ED8241CD1D300008BBA /* Styling.swift in Sources */,
 				19AA9E62241AE47D00F4D59C /* AppDelegate.swift in Sources */,
 				19EE4ED0241CCE6100008BBA /* ConsoleViewController.swift in Sources */,
 				19EE4ECC241BC72700008BBA /* DebugToast.swift in Sources */,

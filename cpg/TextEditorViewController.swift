@@ -12,7 +12,7 @@ class TextEditorViewController: NSViewController {
         DebugToast.setupContainerView(in: view)
 
         textView.delegate = textEditingDelegate
-        textView.font = NSFont(name: "SF Mono", size: 12)
+        textView.font = Styling.defaultEditorFont
     }
 }
 
