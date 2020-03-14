@@ -1,6 +1,6 @@
 import Cocoa
 
-class ViewController: NSViewController {
+class TextEditorViewController: NSViewController {
 
     @IBOutlet private var textView: NSTextView!
 
@@ -13,12 +13,6 @@ class ViewController: NSViewController {
 
         textView.delegate = textEditingDelegate
         textView.font = NSFont(name: "SF Mono", size: 12)
-    }
-
-    override var representedObject: Any? {
-        didSet {
-
-        }
     }
 }
 
