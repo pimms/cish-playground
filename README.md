@@ -6,7 +6,7 @@
 
 Cish requires Antlr to generate the syntax files.
 
-``
+```
 $ brew install antlr
 ```
 
