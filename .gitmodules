@@ -1,0 +1,3 @@
+[submodule "deps/cish"]
+	path = deps/cish
+	url = https://github.com/pimms/cish.git
