@@ -1,4 +1,5 @@
 import Cocoa
+import cishbridge
 
 class TextEditorViewController: NSViewController {
 
@@ -13,6 +14,8 @@ class TextEditorViewController: NSViewController {
 
         textView.delegate = textEditingDelegate
         textView.font = Styling.defaultEditorFont
+
+        let cish = CishExecutor()
     }
 }
 
