@@ -1,3 +1,6 @@
 [submodule "deps/cish"]
 	path = deps/cish
 	url = https://github.com/pimms/cish.git
+[submodule "deps/antlr4"]
+	path = deps/antlr4
+	url = https://github.com/antlr/antlr4

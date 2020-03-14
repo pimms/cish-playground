@@ -713,6 +713,7 @@
                         </connections>
                     </window>
                     <connections>
+                        <outlet property="runButton" destination="L4g-p2-7w6" id="g2y-4c-6db"/>
                         <segue destination="9LP-HQ-1Ld" kind="relationship" relationship="window.shadowedContentViewController" id="GGz-qJ-eb9"/>
                     </connections>
                 </windowController>
@@ -741,6 +742,24 @@
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             <size key="minSize" width="842" height="322"/>
                                             <size key="maxSize" width="845" height="10000000"/>
+                                            <attributedString key="textStorage">
+                                                <fragment>
+                                                    <string key="content">#include &lt;stdio.h&gt;
+int main() {
+	int sum = 0;
+	for (int i=0; i&lt;1000; i++) {
+		sum += i;
+		printf("Hello, %d!\n", i);
+	}
+	return sum;
+}</string>
+                                                    <attributes>
+                                                        <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                        <font key="NSFont" metaFont="user"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
                                             <color key="insertionPointColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                             <allowedInputSourceLocales>
                                                 <string>NSAllRomanInputSourcesLocaleIdentifier</string>
@@ -781,7 +800,7 @@
         <!--Split View Controller-->
         <scene sceneID="odX-QJ-GFf">
             <objects>
-                <splitViewController id="9LP-HQ-1Ld" sceneMemberID="viewController">
+                <splitViewController id="9LP-HQ-1Ld" customClass="SplitViewController" customModule="cpg" customModuleProvider="target" sceneMemberID="viewController">
                     <splitViewItems>
                         <splitViewItem id="xda-gu-UJy"/>
                         <splitViewItem id="Od4-Hc-DmW"/>

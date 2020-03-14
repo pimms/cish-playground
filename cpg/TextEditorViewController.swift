@@ -3,9 +3,17 @@ import cishbridge
 
 class TextEditorViewController: NSViewController {
 
+    // MARK: - Internal properties
+
+    var programSource: String { textView.string }
+
+    // MARK: - Private properties
+
     @IBOutlet private var textView: NSTextView!
 
     private let textEditingDelegate = TextEditingDelegate()
+
+    // MARK: - Lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -14,8 +22,6 @@ class TextEditorViewController: NSViewController {
 
         textView.delegate = textEditingDelegate
         textView.font = Styling.defaultEditorFont
-
-        let cish = CishExecutor()
     }
 }
 

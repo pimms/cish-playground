@@ -70,7 +70,7 @@
 }
 
 - (BOOL)buildAst:(NSString*)programSource {
-    const char *cstr = [programSource cStringUsingEncoding: NSASCIIStringEncoding];
+    const char *cstr = [programSource cStringUsingEncoding: NSUTF8StringEncoding];
     std::string cppstr(cstr);
 
     cish::module::ModuleContext::Ptr moduleContext = [self createModuleContext];

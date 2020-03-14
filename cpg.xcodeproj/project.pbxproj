@@ -7,11 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1971928A241D47F000E034A5 /* libantlr4-runtime.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19719283241D465700E034A5 /* libantlr4-runtime.a */; };
+		1971928C241D48F800E034A5 /* ExecutionContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1971928B241D48F800E034A5 /* ExecutionContext.swift */; };
 		19AA9E62241AE47D00F4D59C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19AA9E61241AE47D00F4D59C /* AppDelegate.swift */; };
 		19AA9E66241AE47E00F4D59C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19AA9E65241AE47E00F4D59C /* Assets.xcassets */; };
 		19AA9E69241AE47E00F4D59C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19AA9E67241AE47E00F4D59C /* Main.storyboard */; };
 		19AA9E75241AE47E00F4D59C /* cpgTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19AA9E74241AE47E00F4D59C /* cpgTests.swift */; };
-		19B53ED0241D005600EDADB7 /* libcish.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 19B53EC9241D004300EDADB7 /* libcish.dylib */; };
+		19B53ED0241D005600EDADB7 /* libcish.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19B53EC9241D004300EDADB7 /* libcish.a */; };
 		19EE4ECC241BC72700008BBA /* DebugToast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EE4ECB241BC72700008BBA /* DebugToast.swift */; };
 		19EE4ECE241CC94500008BBA /* WindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EE4ECD241CC94500008BBA /* WindowController.swift */; };
 		19EE4ED0241CCE6100008BBA /* ConsoleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EE4ECF241CCE6100008BBA /* ConsoleViewController.swift */; };
@@ -29,6 +31,27 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		19719280241D465700E034A5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1971926F241D465700E034A5 /* LIBANTLR4.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BACDFE8A13974B35ACE5940A;
+			remoteInfo = antlr4_shared;
+		};
+		19719282241D465700E034A5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1971926F241D465700E034A5 /* LIBANTLR4.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 149F7093F51D4BD58A715C6A;
+			remoteInfo = antlr4_static;
+		};
+		19719284241D46BA00E034A5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1971926F241D465700E034A5 /* LIBANTLR4.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = F046407434024B00988DB998;
+			remoteInfo = antlr4_static;
+		};
 		19AA9E71241AE47E00F4D59C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 19AA9E56241AE47D00F4D59C /* Project object */;
@@ -61,7 +84,7 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = 19B53EBD241D004300EDADB7 /* cish.xcodeproj */;
 			proxyType = 1;
-			remoteGlobalIDString = 91512642EDDF4C9A94D16A84;
+			remoteGlobalIDString = 946D5DF16EA84F5A99203031;
 			remoteInfo = cish;
 		};
 		19EE4EFB241CD29200008BBA /* PBXContainerItemProxy */ = {
@@ -102,6 +125,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1971926F241D465700E034A5 /* LIBANTLR4.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = LIBANTLR4.xcodeproj; path = deps/antlr4/runtime/Cpp/build/LIBANTLR4.xcodeproj; sourceTree = "<group>"; };
+		1971928B241D48F800E034A5 /* ExecutionContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExecutionContext.swift; sourceTree = "<group>"; };
 		19AA9E5E241AE47D00F4D59C /* cpg.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cpg.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		19AA9E61241AE47D00F4D59C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		19AA9E65241AE47E00F4D59C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -149,7 +174,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				19B53ED0241D005600EDADB7 /* libcish.dylib in Frameworks */,
+				1971928A241D47F000E034A5 /* libantlr4-runtime.a in Frameworks */,
+				19B53ED0241D005600EDADB7 /* libcish.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -164,6 +190,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		19719270241D465700E034A5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				19719281241D465700E034A5 /* libantlr4-runtime.dylib */,
+				19719283241D465700E034A5 /* libantlr4-runtime.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		19AA9E55241AE47D00F4D59C = {
 			isa = PBXGroup;
 			children = (
@@ -173,6 +208,7 @@
 				19EE4EFF241CD29200008BBA /* cishbridgeTests */,
 				19AA9E5F241AE47D00F4D59C /* Products */,
 				19EE4F14241CD73100008BBA /* Frameworks */,
+				1971926F241D465700E034A5 /* LIBANTLR4.xcodeproj */,
 				19B53EBD241D004300EDADB7 /* cish.xcodeproj */,
 			);
 			sourceTree = "<group>";
@@ -197,6 +233,7 @@
 				19EE4ECF241CCE6100008BBA /* ConsoleViewController.swift */,
 				19EE4ED3241CCF3100008BBA /* SplitViewController.swift */,
 				19EE4ECD241CC94500008BBA /* WindowController.swift */,
+				1971928B241D48F800E034A5 /* ExecutionContext.swift */,
 				19EE4ECB241BC72700008BBA /* DebugToast.swift */,
 				19AA9E65241AE47E00F4D59C /* Assets.xcassets */,
 				19AA9E67241AE47E00F4D59C /* Main.storyboard */,
@@ -218,7 +255,7 @@
 		19B53EBE241D004300EDADB7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				19B53EC9241D004300EDADB7 /* libcish.dylib */,
+				19B53EC9241D004300EDADB7 /* libcish.a */,
 				19B53ECB241D004300EDADB7 /* cish_cli */,
 				19B53ECD241D004300EDADB7 /* cishtest */,
 			);
@@ -317,7 +354,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 19EE4F09241CD29200008BBA /* Build configuration list for PBXNativeTarget "cishbridge" */;
 			buildPhases = (
-				19B53ED1241D02CE00EDADB7 /* Check for ANTLR4 */,
 				19EE4EEC241CD29200008BBA /* Headers */,
 				19EE4EED241CD29200008BBA /* Sources */,
 				19EE4EEE241CD29200008BBA /* Frameworks */,
@@ -326,6 +362,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				19719285241D46BA00E034A5 /* PBXTargetDependency */,
 				19B53ECF241D005000EDADB7 /* PBXTargetDependency */,
 			);
 			name = cishbridge;
@@ -395,6 +432,10 @@
 					ProductGroup = 19B53EBE241D004300EDADB7 /* Products */;
 					ProjectRef = 19B53EBD241D004300EDADB7 /* cish.xcodeproj */;
 				},
+				{
+					ProductGroup = 19719270241D465700E034A5 /* Products */;
+					ProjectRef = 1971926F241D465700E034A5 /* LIBANTLR4.xcodeproj */;
+				},
 			);
 			projectRoot = "";
 			targets = (
@@ -407,10 +448,25 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		19B53EC9241D004300EDADB7 /* libcish.dylib */ = {
+		19719281241D465700E034A5 /* libantlr4-runtime.dylib */ = {
 			isa = PBXReferenceProxy;
 			fileType = "compiled.mach-o.dylib";
-			path = libcish.dylib;
+			name = "libantlr4-runtime.dylib";
+			path = "libantlr4-runtime.4.8.dylib";
+			remoteRef = 19719280241D465700E034A5 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		19719283241D465700E034A5 /* libantlr4-runtime.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libantlr4-runtime.a";
+			remoteRef = 19719282241D465700E034A5 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		19B53EC9241D004300EDADB7 /* libcish.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libcish.a;
 			remoteRef = 19B53EC8241D004300EDADB7 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
@@ -463,28 +519,6 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		19B53ED1241D02CE00EDADB7 /* Check for ANTLR4 */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "Check for ANTLR4";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif [ ! -f /usr/local/lib/libantlr4-runtime.a ]; then\n    echo CHECK FOR ANTLR4 INSTALLATION FAILED\n    echo Could not find libantlr4-runtime.a in /usr/local/lib\n    echo If you are feeling frisky, try to remove this build phase. \n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		19AA9E5A241AE47D00F4D59C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -492,6 +526,7 @@
 			files = (
 				19EE4ED2241CCEA100008BBA /* TextEditorViewController.swift in Sources */,
 				19EE4ECE241CC94500008BBA /* WindowController.swift in Sources */,
+				1971928C241D48F800E034A5 /* ExecutionContext.swift in Sources */,
 				19EE4ED8241CD1D300008BBA /* Styling.swift in Sources */,
 				19AA9E62241AE47D00F4D59C /* AppDelegate.swift in Sources */,
 				19EE4ED0241CCE6100008BBA /* ConsoleViewController.swift in Sources */,
@@ -528,6 +563,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		19719285241D46BA00E034A5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = antlr4_static;
+			targetProxy = 19719284241D46BA00E034A5 /* PBXContainerItemProxy */;
+		};
 		19AA9E72241AE47E00F4D59C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 19AA9E5D241AE47D00F4D59C /* cpg */;
@@ -782,7 +822,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				HEADER_SEARCH_PATHS = "/usr/local/include/antlr4-runtime";
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/deps/antlr4/runtime/Cpp/runtime/src";
 				INFOPLIST_FILE = cishbridge/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -790,12 +830,10 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
-				LIBRARY_SEARCH_PATHS = /usr/local/lib;
 				OTHER_CPLUSPLUSFLAGS = (
 					"-DDEBUG",
 					"'-std=gnu++1z'",
 				);
-				OTHER_LDFLAGS = "-lantlr4-runtime";
 				PRELINK_LIBS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = no.jstien.cishbridge;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
@@ -823,7 +861,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				HEADER_SEARCH_PATHS = "/usr/local/include/antlr4-runtime";
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/deps/antlr4/runtime/Cpp/runtime/src";
 				INFOPLIST_FILE = cishbridge/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -831,12 +869,10 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
-				LIBRARY_SEARCH_PATHS = /usr/local/lib;
 				OTHER_CPLUSPLUSFLAGS = (
 					"-DNDEBUG",
 					"'-std=gnu++1z'",
 				);
-				OTHER_LDFLAGS = "-lantlr4-runtime";
 				PRELINK_LIBS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = no.jstien.cishbridge;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";

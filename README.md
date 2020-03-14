@@ -4,19 +4,19 @@
 
 ### Dependencies
 
-Cish requires Antlr, CMake, and the Antlr runtime to configure & build properly.
+Cish requires Antlr to generate the syntax files.
 
 ``
-$ brew install antlr antlr4-cpp-runtime cmake
+$ brew install antlr
 ```
-
-`cpg.xcodeproj` assumes that the file `libantlr4-runtime.a` is placed in `/usr/local/lib` - if this is
-not the case, remove the build phase that performs this check.
 
 ### Cish Submodule Initialization
 
-Run `setup.sh` to ensure that Cish' Xcode project file is created:
+Run `setup.sh` to ensure Xcode project files for Cish and the Antlr runtime is
+created:
 
 ```
 $ ./setup.sh
 ```
+
+Compile & run `cpg.xcodeproj`, and you should be good to go!

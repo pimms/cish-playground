@@ -5,8 +5,10 @@ public class CishExecutor {
 
     public init() {}
 
-    public func executeProgram(source: String, withArguments args: [String]) {
+    public func executeProgram(source: String, withArguments args: [String]) -> Int {
         let bridge = Bridge(heapSize: heapSize, arguments: args)
-        bridge.executeProgram(source)
+        let exitCode = bridge.executeProgram(source)
+
+        return Int(exitCode)
     }
 }
