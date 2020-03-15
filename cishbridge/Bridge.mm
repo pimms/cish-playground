@@ -117,7 +117,8 @@
     stdoutHook = new StdoutHook();
     stdoutHook->setOutputCallback([self](const std::string &str) {
         const char *cstr = str.c_str();
-        NSLog(@"stdout: %s\n", cstr);
+        NSString *nsstring = [NSString stringWithCString:cstr encoding:NSUTF8StringEncoding];
+        [_delegate bridge:self stdoutWasAppended:nsstring];
     });
     vm->getExecutionContext()->setStdout(stdoutHook);
 }

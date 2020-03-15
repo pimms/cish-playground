@@ -872,6 +872,7 @@ int main() {
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="scrollView" destination="k62-FC-gvs" id="Fow-3Y-Syh"/>
                         <outlet property="textView" destination="jid-Oo-rhv" id="vxd-nF-pIc"/>
                     </connections>
                 </viewController>

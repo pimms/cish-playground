@@ -5,7 +5,14 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@class Bridge;
+
+@protocol BridgeDelegate
+- (void)bridge:(Bridge*)bridge stdoutWasAppended:(NSString*)string;
+@end
+
 @interface Bridge: NSObject
+@property (nonatomic, weak) id<BridgeDelegate> delegate;
 - (id)initWithHeapSize:(unsigned int)heapSize arguments:(NSArray<NSString*>*)args;
 - (int)executeProgram:(NSString*)programSource;
 @end

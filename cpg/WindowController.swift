@@ -32,6 +32,8 @@ class WindowController: NSWindowController {
 
         isRunning = true
 
+        splitViewController.consoleViewController.clearConsole()
+
         let context = ExecutionContext()
         context.delegate = self
         context.executeProgram(source: source)
@@ -45,7 +47,17 @@ extension WindowController: ExecutionContextDelegate {
     }
 
     func executionContext(_ context: ExecutionContext, completedWithExitCode exitCode: Int) {
-        DebugToast.display("Program finished with code: \(exitCode)", type: .debug)
         isRunning = false
+
+        DispatchQueue.main.async {
+            let message = "\nProgram terminated with code \(exitCode)"
+            self.splitViewController.consoleViewController.appendConsole(with: message)
+        }
+    }
+
+    func executionContext(_ context: ExecutionContext, appendedStdoutWith string: String) {
+        DispatchQueue.main.async {
+            self.splitViewController.consoleViewController.appendConsole(with: string)
+        }
     }
 }
