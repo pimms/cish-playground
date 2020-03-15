@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1902F3CF241E3975003FFE7C /* StdoutHook.h in Headers */ = {isa = PBXBuildFile; fileRef = 1902F3CE241E3975003FFE7C /* StdoutHook.h */; };
 		1902F3DE241E39D1003FFE7C /* StdoutHook.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1902F3DD241E39D1003FFE7C /* StdoutHook.cpp */; };
+		1902F3E1241E6A93003FFE7C /* ConsoleBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1902F3E0241E6A93003FFE7C /* ConsoleBuffer.swift */; };
 		1971928A241D47F000E034A5 /* libantlr4-runtime.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19719283241D465700E034A5 /* libantlr4-runtime.a */; };
 		1971928C241D48F800E034A5 /* ExecutionContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1971928B241D48F800E034A5 /* ExecutionContext.swift */; };
 		19AA9E62241AE47D00F4D59C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19AA9E61241AE47D00F4D59C /* AppDelegate.swift */; };
@@ -129,6 +130,7 @@
 /* Begin PBXFileReference section */
 		1902F3CE241E3975003FFE7C /* StdoutHook.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StdoutHook.h; sourceTree = "<group>"; };
 		1902F3DD241E39D1003FFE7C /* StdoutHook.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = StdoutHook.cpp; sourceTree = "<group>"; };
+		1902F3E0241E6A93003FFE7C /* ConsoleBuffer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsoleBuffer.swift; sourceTree = "<group>"; };
 		1971926F241D465700E034A5 /* LIBANTLR4.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = LIBANTLR4.xcodeproj; path = deps/antlr4/runtime/Cpp/build/LIBANTLR4.xcodeproj; sourceTree = "<group>"; };
 		1971928B241D48F800E034A5 /* ExecutionContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExecutionContext.swift; sourceTree = "<group>"; };
 		19AA9E5E241AE47D00F4D59C /* cpg.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cpg.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -194,6 +196,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1902F3DF241E6A88003FFE7C /* Console */ = {
+			isa = PBXGroup;
+			children = (
+				19EE4ECF241CCE6100008BBA /* ConsoleViewController.swift */,
+				1902F3E0241E6A93003FFE7C /* ConsoleBuffer.swift */,
+			);
+			path = Console;
+			sourceTree = "<group>";
+		};
 		19719270241D465700E034A5 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -231,10 +242,10 @@
 		19AA9E60241AE47D00F4D59C /* cpg */ = {
 			isa = PBXGroup;
 			children = (
+				1902F3DF241E6A88003FFE7C /* Console */,
 				19EE4ED5241CD1BB00008BBA /* Library */,
 				19AA9E61241AE47D00F4D59C /* AppDelegate.swift */,
 				19EE4ED1241CCEA100008BBA /* TextEditorViewController.swift */,
-				19EE4ECF241CCE6100008BBA /* ConsoleViewController.swift */,
 				19EE4ED3241CCF3100008BBA /* SplitViewController.swift */,
 				19EE4ECD241CC94500008BBA /* WindowController.swift */,
 				1971928B241D48F800E034A5 /* ExecutionContext.swift */,
@@ -535,6 +546,7 @@
 				19EE4ECE241CC94500008BBA /* WindowController.swift in Sources */,
 				1971928C241D48F800E034A5 /* ExecutionContext.swift in Sources */,
 				19EE4ED8241CD1D300008BBA /* Styling.swift in Sources */,
+				1902F3E1241E6A93003FFE7C /* ConsoleBuffer.swift in Sources */,
 				19AA9E62241AE47D00F4D59C /* AppDelegate.swift in Sources */,
 				19EE4ED0241CCE6100008BBA /* ConsoleViewController.swift in Sources */,
 				19EE4ECC241BC72700008BBA /* DebugToast.swift in Sources */,

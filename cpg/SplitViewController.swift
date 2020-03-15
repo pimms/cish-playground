@@ -1,11 +1,12 @@
 import Cocoa
 
 class SplitViewController: NSSplitViewController {
-    var textEditorViewController: TextEditorViewController {
-        return splitViewItems[0].viewController as! TextEditorViewController
-    }
+    var textEditorViewController: TextEditorViewController!
+    var consoleViewController: ConsoleViewController!
 
-    var consoleViewController: ConsoleViewController {
-        return splitViewItems[1].viewController as! ConsoleViewController
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        textEditorViewController = splitViewItems[0].viewController as? TextEditorViewController
+        consoleViewController = splitViewItems[1].viewController as? ConsoleViewController
     }
 }

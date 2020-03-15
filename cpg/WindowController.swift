@@ -5,10 +5,7 @@ class WindowController: NSWindowController {
     // MARK: - Private properties
 
     @IBOutlet private var runButton: NSToolbarItem!
-
-    private var splitViewController: SplitViewController {
-        return contentViewController as! SplitViewController
-    }
+    private var splitViewController: SplitViewController!
 
     private var isRunning: Bool = false {
         didSet {
@@ -22,6 +19,8 @@ class WindowController: NSWindowController {
         super.windowDidLoad()
         window?.center()
         window?.title = "Cish Playgrounds"
+
+        splitViewController = contentViewController as? SplitViewController
     }
 
     // MARK: - IBActions
@@ -56,8 +55,6 @@ extension WindowController: ExecutionContextDelegate {
     }
 
     func executionContext(_ context: ExecutionContext, appendedStdoutWith string: String) {
-        DispatchQueue.main.async {
-            self.splitViewController.consoleViewController.appendConsole(with: string)
-        }
+        self.splitViewController.consoleViewController.appendConsole(with: string)
     }
 }
