@@ -11,6 +11,8 @@
 #include "module/stdlib/stdlibModule.h"
 #include "module/string/stringModule.h"
 
+#include "StdoutHook.h"
+
 @interface Bridge()
 - (void)reset;
 - (BOOL)buildAst:(NSString*)programSource;
@@ -23,6 +25,7 @@
     cish::vm::VmOptions vmOptions;
     cish::ast::Ast::Ptr ast;
     cish::vm::VirtualMachine *vm;
+    StdoutHook *stdoutHook;
 }
 
 
@@ -67,6 +70,11 @@
         delete vm;
         vm = nullptr;
     }
+
+    if (stdoutHook != nullptr) {
+        delete stdoutHook;
+        stdoutHook = nullptr;
+    }
 }
 
 - (BOOL)buildAst:(NSString*)programSource {
@@ -105,6 +113,13 @@
 
 - (void)createVirtualMachine {
     vm = new cish::vm::VirtualMachine(vmOptions, ast);
+
+    stdoutHook = new StdoutHook();
+    stdoutHook->setOutputCallback([self](const std::string &str) {
+        const char *cstr = str.c_str();
+        NSLog(@"stdout: %s\n", cstr);
+    });
+    vm->getExecutionContext()->setStdout(stdoutHook);
 }
 
 - (int)execute {

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1902F3CF241E3975003FFE7C /* StdoutHook.h in Headers */ = {isa = PBXBuildFile; fileRef = 1902F3CE241E3975003FFE7C /* StdoutHook.h */; };
+		1902F3DE241E39D1003FFE7C /* StdoutHook.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1902F3DD241E39D1003FFE7C /* StdoutHook.cpp */; };
 		1971928A241D47F000E034A5 /* libantlr4-runtime.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19719283241D465700E034A5 /* libantlr4-runtime.a */; };
 		1971928C241D48F800E034A5 /* ExecutionContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1971928B241D48F800E034A5 /* ExecutionContext.swift */; };
 		19AA9E62241AE47D00F4D59C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19AA9E61241AE47D00F4D59C /* AppDelegate.swift */; };
@@ -49,7 +51,7 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = 1971926F241D465700E034A5 /* LIBANTLR4.xcodeproj */;
 			proxyType = 1;
-			remoteGlobalIDString = F046407434024B00988DB998;
+			remoteGlobalIDString = 51388CC391FB42E698191AE0;
 			remoteInfo = antlr4_static;
 		};
 		19AA9E71241AE47E00F4D59C /* PBXContainerItemProxy */ = {
@@ -125,6 +127,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1902F3CE241E3975003FFE7C /* StdoutHook.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StdoutHook.h; sourceTree = "<group>"; };
+		1902F3DD241E39D1003FFE7C /* StdoutHook.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = StdoutHook.cpp; sourceTree = "<group>"; };
 		1971926F241D465700E034A5 /* LIBANTLR4.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = LIBANTLR4.xcodeproj; path = deps/antlr4/runtime/Cpp/build/LIBANTLR4.xcodeproj; sourceTree = "<group>"; };
 		1971928B241D48F800E034A5 /* ExecutionContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExecutionContext.swift; sourceTree = "<group>"; };
 		19AA9E5E241AE47D00F4D59C /* cpg.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cpg.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -278,6 +282,8 @@
 				19EE4EF4241CD29200008BBA /* Info.plist */,
 				19EE4F11241CD37100008BBA /* Bridge.h */,
 				19EE4F12241CD3C100008BBA /* Bridge.mm */,
+				1902F3CE241E3975003FFE7C /* StdoutHook.h */,
+				1902F3DD241E39D1003FFE7C /* StdoutHook.cpp */,
 			);
 			path = cishbridge;
 			sourceTree = "<group>";
@@ -306,6 +312,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				19EE4F1F241CDA0B00008BBA /* Bridge.h in Headers */,
+				1902F3CF241E3975003FFE7C /* StdoutHook.h in Headers */,
 				19EE4F03241CD29200008BBA /* cishbridge.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -452,7 +459,7 @@
 			isa = PBXReferenceProxy;
 			fileType = "compiled.mach-o.dylib";
 			name = "libantlr4-runtime.dylib";
-			path = "libantlr4-runtime.4.8.dylib";
+			path = "libantlr4-runtime.4.7.2.dylib";
 			remoteRef = 19719280241D465700E034A5 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
@@ -548,6 +555,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				19EE4F1A241CD91900008BBA /* CishExecutor.swift in Sources */,
+				1902F3DE241E39D1003FFE7C /* StdoutHook.cpp in Sources */,
 				19EE4F13241CD3C100008BBA /* Bridge.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
