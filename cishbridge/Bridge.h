@@ -2,6 +2,7 @@
 #define Bridge_h
 
 #import <Foundation/Foundation.h>
+#import "CishModule.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -15,6 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, weak) id<BridgeDelegate> delegate;
 - (id)initWithHeapSize:(unsigned int)heapSize arguments:(NSArray<NSString*>*)args;
 - (int)executeProgram:(NSString*)programSource;
+- (NSArray<CishModule*>*)cishModules;
 @end
 
 NS_ASSUME_NONNULL_END

@@ -15,6 +15,5 @@ FOUNDATION_EXPORT double cishbridgeVersionNumber;
 FOUNDATION_EXPORT const unsigned char cishbridgeVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <cishbridge/PublicHeader.h>
+#import <cishbridge/CishModule.h>
 #import <cishbridge/Bridge.h>
-
-

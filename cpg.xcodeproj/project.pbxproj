@@ -12,6 +12,11 @@
 		1902F3E1241E6A93003FFE7C /* ConsoleBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1902F3E0241E6A93003FFE7C /* ConsoleBuffer.swift */; };
 		1971928A241D47F000E034A5 /* libantlr4-runtime.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19719283241D465700E034A5 /* libantlr4-runtime.a */; };
 		1971928C241D48F800E034A5 /* ExecutionContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1971928B241D48F800E034A5 /* ExecutionContext.swift */; };
+		19995063241E905F00780084 /* CishModule.mm in Sources */ = {isa = PBXBuildFile; fileRef = 19995062241E905F00780084 /* CishModule.mm */; };
+		19995065241E943F00780084 /* CishModule.h in Headers */ = {isa = PBXBuildFile; fileRef = 19995064241E907400780084 /* CishModule.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		19995067241E947300780084 /* CishModule+privateInit.h in Headers */ = {isa = PBXBuildFile; fileRef = 19995066241E947300780084 /* CishModule+privateInit.h */; };
+		1999506B241E9D1800780084 /* DocumentationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1999506A241E9D1800780084 /* DocumentationViewController.swift */; };
+		1999506D241E9D3D00780084 /* DocumentationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1999506C241E9D3D00780084 /* DocumentationViewController.xib */; };
 		19AA9E62241AE47D00F4D59C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19AA9E61241AE47D00F4D59C /* AppDelegate.swift */; };
 		19AA9E66241AE47E00F4D59C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19AA9E65241AE47E00F4D59C /* Assets.xcassets */; };
 		19AA9E69241AE47E00F4D59C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19AA9E67241AE47E00F4D59C /* Main.storyboard */; };
@@ -133,6 +138,11 @@
 		1902F3E0241E6A93003FFE7C /* ConsoleBuffer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsoleBuffer.swift; sourceTree = "<group>"; };
 		1971926F241D465700E034A5 /* LIBANTLR4.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = LIBANTLR4.xcodeproj; path = deps/antlr4/runtime/Cpp/build/LIBANTLR4.xcodeproj; sourceTree = "<group>"; };
 		1971928B241D48F800E034A5 /* ExecutionContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExecutionContext.swift; sourceTree = "<group>"; };
+		19995062241E905F00780084 /* CishModule.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = CishModule.mm; sourceTree = "<group>"; };
+		19995064241E907400780084 /* CishModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CishModule.h; sourceTree = "<group>"; };
+		19995066241E947300780084 /* CishModule+privateInit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CishModule+privateInit.h"; sourceTree = "<group>"; };
+		1999506A241E9D1800780084 /* DocumentationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentationViewController.swift; sourceTree = "<group>"; };
+		1999506C241E9D3D00780084 /* DocumentationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DocumentationViewController.xib; sourceTree = "<group>"; };
 		19AA9E5E241AE47D00F4D59C /* cpg.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cpg.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		19AA9E61241AE47D00F4D59C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		19AA9E65241AE47E00F4D59C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -214,6 +224,15 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		1999505F241E74DD00780084 /* Documentation */ = {
+			isa = PBXGroup;
+			children = (
+				1999506A241E9D1800780084 /* DocumentationViewController.swift */,
+				1999506C241E9D3D00780084 /* DocumentationViewController.xib */,
+			);
+			path = Documentation;
+			sourceTree = "<group>";
+		};
 		19AA9E55241AE47D00F4D59C = {
 			isa = PBXGroup;
 			children = (
@@ -242,8 +261,9 @@
 		19AA9E60241AE47D00F4D59C /* cpg */ = {
 			isa = PBXGroup;
 			children = (
-				1902F3DF241E6A88003FFE7C /* Console */,
 				19EE4ED5241CD1BB00008BBA /* Library */,
+				1902F3DF241E6A88003FFE7C /* Console */,
+				1999505F241E74DD00780084 /* Documentation */,
 				19AA9E61241AE47D00F4D59C /* AppDelegate.swift */,
 				19EE4ED1241CCEA100008BBA /* TextEditorViewController.swift */,
 				19EE4ED3241CCF3100008BBA /* SplitViewController.swift */,
@@ -289,12 +309,15 @@
 			isa = PBXGroup;
 			children = (
 				19EE4F19241CD91900008BBA /* CishExecutor.swift */,
-				19EE4EF3241CD29200008BBA /* cishbridge.h */,
-				19EE4EF4241CD29200008BBA /* Info.plist */,
 				19EE4F11241CD37100008BBA /* Bridge.h */,
 				19EE4F12241CD3C100008BBA /* Bridge.mm */,
+				19995066241E947300780084 /* CishModule+privateInit.h */,
+				19995064241E907400780084 /* CishModule.h */,
+				19995062241E905F00780084 /* CishModule.mm */,
 				1902F3CE241E3975003FFE7C /* StdoutHook.h */,
 				1902F3DD241E39D1003FFE7C /* StdoutHook.cpp */,
+				19EE4EF3241CD29200008BBA /* cishbridge.h */,
+				19EE4EF4241CD29200008BBA /* Info.plist */,
 			);
 			path = cishbridge;
 			sourceTree = "<group>";
@@ -322,9 +345,11 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19995067241E947300780084 /* CishModule+privateInit.h in Headers */,
 				19EE4F1F241CDA0B00008BBA /* Bridge.h in Headers */,
 				1902F3CF241E3975003FFE7C /* StdoutHook.h in Headers */,
 				19EE4F03241CD29200008BBA /* cishbridge.h in Headers */,
+				19995065241E943F00780084 /* CishModule.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -510,6 +535,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				19AA9E66241AE47E00F4D59C /* Assets.xcassets in Resources */,
+				1999506D241E9D3D00780084 /* DocumentationViewController.xib in Resources */,
 				19AA9E69241AE47E00F4D59C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -551,6 +577,7 @@
 				19EE4ED0241CCE6100008BBA /* ConsoleViewController.swift in Sources */,
 				19EE4ECC241BC72700008BBA /* DebugToast.swift in Sources */,
 				19EE4ED4241CCF3100008BBA /* SplitViewController.swift in Sources */,
+				1999506B241E9D1800780084 /* DocumentationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -568,6 +595,7 @@
 			files = (
 				19EE4F1A241CD91900008BBA /* CishExecutor.swift in Sources */,
 				1902F3DE241E39D1003FFE7C /* StdoutHook.cpp in Sources */,
+				19995063241E905F00780084 /* CishModule.mm in Sources */,
 				19EE4F13241CD3C100008BBA /* Bridge.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

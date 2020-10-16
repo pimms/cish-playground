@@ -9,6 +9,11 @@ public class CishExecutor {
     public var heapSize: UInt32 = 1024 * 1024
     public weak var delegate: CishExecutorDelegate?
 
+    public var modules: [CishModule] {
+        let bridge = Bridge(heapSize: 1024, arguments: [])
+        return bridge.cishModules()
+    }
+
     public init() {}
 
     public func executeProgram(source: String, withArguments args: [String]) -> Int {
@@ -16,7 +21,6 @@ public class CishExecutor {
         bridge.delegate = self
 
         let exitCode = bridge.executeProgram(source)
-
         return Int(exitCode)
     }
 }

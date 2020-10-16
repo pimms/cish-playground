@@ -1,5 +1,8 @@
 #import <Foundation/Foundation.h>
 #import "Bridge.h"
+#import "CishModule.h"
+#import "CishModule+privateInit.h"
+#include "StdoutHook.h"
 
 #include <vm/VirtualMachine.h>
 #include <vm/ExecutionContext.h>
@@ -10,8 +13,6 @@
 #include "module/stdio/stdioModule.h"
 #include "module/stdlib/stdlibModule.h"
 #include "module/string/stringModule.h"
-
-#include "StdoutHook.h"
 
 @interface Bridge()
 - (void)reset;
@@ -59,6 +60,19 @@
 
     [self createVirtualMachine];
     return [self execute];
+}
+
+- (NSArray<CishModule*>*)cishModules {
+    cish::module::ModuleContext::Ptr context = [self createModuleContext];
+
+    NSMutableArray* modules = [[NSMutableArray alloc] init];
+
+    for (auto rawModule: context->getModules()) {
+        CishModule* module = [[CishModule alloc] initFromModule:rawModule];
+        [modules addObject:module];
+    }
+
+    return modules;
 }
 
 // MARK: - Private methods

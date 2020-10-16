@@ -37,6 +37,27 @@ class WindowController: NSWindowController {
         context.delegate = self
         context.executeProgram(source: source)
     }
+
+    @IBAction private func docButtonTapped(_ sender: NSToolbarItem) {
+        DebugToast.display("Doc-button tapped", type: .debug)
+
+        let newWindow = NSWindow(contentRect: .init(origin: .zero,
+                                                    size: .init(width: NSScreen.main!.frame.midX,
+                                                                height: NSScreen.main!.frame.midY)),
+                                 styleMask: [.closable],
+                                 backing: .buffered,
+                                 defer: false)
+        newWindow.title = "Documentation"
+        newWindow.isOpaque = true
+        newWindow.center()
+        newWindow.isMovableByWindowBackground = true
+
+        let windowController = NSWindowController(window: newWindow)
+        windowController.contentViewController = DocumentationViewController()
+
+        newWindow.windowController = windowController
+        newWindow.makeKeyAndOrderFront(nil)
+    }
 }
 
 extension WindowController: ExecutionContextDelegate {

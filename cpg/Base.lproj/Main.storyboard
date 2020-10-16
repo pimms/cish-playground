@@ -691,21 +691,27 @@
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
                         <toolbar key="toolbar" implicitIdentifier="965BB75B-BD34-4059-82EF-90E5405F3702" autosavesConfiguration="NO" displayMode="iconAndLabel" sizeMode="regular" id="MKa-j8-Vjq">
                             <allowedToolbarItems>
-                                <toolbarItem implicitItemIdentifier="00AD98BA-6903-40D3-A48D-84B7EE7BC0ED" label="run" paletteLabel="Run" tag="-1" image="NSSlideshowTemplate" id="L4g-p2-7w6">
+                                <toolbarItem implicitItemIdentifier="00AD98BA-6903-40D3-A48D-84B7EE7BC0ED" label="Run" paletteLabel="Run" tag="-1" image="NSSlideshowTemplate" id="L4g-p2-7w6">
                                     <size key="minSize" width="17" height="14"/>
                                     <size key="maxSize" width="17" height="14"/>
                                     <connections>
                                         <action selector="runButtonTapped:" target="B8D-0N-5wS" id="8qg-yo-d3F"/>
                                     </connections>
                                 </toolbarItem>
-                                <toolbarItem implicitItemIdentifier="NSToolbarShowColorsItem" id="5Ru-SF-AR9"/>
-                                <toolbarItem implicitItemIdentifier="NSToolbarShowFontsItem" id="GeW-I7-Wqi"/>
-                                <toolbarItem implicitItemIdentifier="NSToolbarPrintItem" id="WdS-oB-eZM"/>
+                                <toolbarItem implicitItemIdentifier="EE3BDBF7-9A86-43E0-9537-56E5BEF6BF92" label="Docs" paletteLabel="Docs" tag="-1" image="NSBookmarksTemplate" id="baD-Qb-xwl" userLabel="Doc Button">
+                                    <size key="minSize" width="17" height="18"/>
+                                    <size key="maxSize" width="17" height="18"/>
+                                    <connections>
+                                        <action selector="docButtonTapped:" target="B8D-0N-5wS" id="0ct-nt-S0H"/>
+                                    </connections>
+                                </toolbarItem>
                                 <toolbarItem implicitItemIdentifier="NSToolbarSpaceItem" id="xei-nx-LWc"/>
                                 <toolbarItem implicitItemIdentifier="NSToolbarFlexibleSpaceItem" id="4EC-mq-L7N"/>
                             </allowedToolbarItems>
                             <defaultToolbarItems>
                                 <toolbarItem reference="L4g-p2-7w6"/>
+                                <toolbarItem reference="4EC-mq-L7N"/>
+                                <toolbarItem reference="baD-Qb-xwl"/>
                             </defaultToolbarItems>
                         </toolbar>
                         <connections>
@@ -882,6 +888,7 @@ int main() {
         </scene>
     </scenes>
     <resources>
+        <image name="NSBookmarksTemplate" width="17" height="18"/>
         <image name="NSSlideshowTemplate" width="17" height="14"/>
     </resources>
 </document>
